@@ -1,0 +1,15 @@
+@import "common/reset";
+@import "common/globals";
+@import "common/font";
+@import "common/variable";
+
+@import "component/header";
+@import "component/footer";
+@import "component/btn";
+
+@import "pages/main";
+@import "pages/intro";
+@import "pages/career";
+@import "pages/project";
+
+@import "common/mediaquery";

@@ -1,0 +1,76 @@
+.career {
+  &-section {
+    padding: 0 12rem;
+    margin-top: 20rem;
+  }
+
+  &-tit {
+    border-bottom: 0.1rem solid $secondary-color;
+    padding-bottom: 0.5rem;
+    font: {
+      family: $font-eng-tit;
+      size: 2rem;
+    }
+  }
+
+  &-wrap {
+    position: relative;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding: 10rem 0 10rem 30rem;
+  }
+
+  &-line {
+    position: absolute;
+    height: 100%;
+    width: 0.3rem;
+    background: $secondary-color;
+    left: 30rem;
+    top: 0;
+  }
+
+  &-ball {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: $secondary-color;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-left: 20rem;
+    min-width: 45rem;
+
+    h3 {
+      font: {
+        size: 3rem;
+        weight: 700;
+      }
+
+      sup {
+        margin-left: 0.5rem;
+        font: {
+          size: $font-medium;
+          weight: 400;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+}
