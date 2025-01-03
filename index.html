@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/style/style.css" />
     <script src="./assets/js/layout.js"></script>
     <script src="./assets/js/swiper/swiper-bundle.js"></script>
-    <script src="./assets/js/common.js"></script>
+    <script defer src="./assets/js/common.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -91,15 +91,18 @@
         </div>
         <div class="career-wrap">
           <div class="career-line">
-            <i class="career-ball ball1">
-              <span class="blind">pin</span>
-            </i>
-            <i class="career-ball ball2">
-              <span class="blind">pin</span>
-            </i>
-            <i class="career-ball ball3">
-              <span class="blind">pin</span>
-            </i>
+            <div class="career-trigger">
+              <i class="career-ball ball1">
+                <span class="blind">pin</span>
+              </i>
+              <i class="career-marker ball2">
+                <span class="blind">pin</span>
+              </i>
+              <i class="career-marker ball3">
+                <span class="blind">pin</span>
+              </i>
+            </div>
+            <div class="career-final"></div>
           </div>
           <div class="career-item">
             <h3>(주)아이스크림에듀 <sup>23.07 ~ 재직중</sup></h3>
@@ -146,7 +149,10 @@
             </div>
             <div class="swiper-pagination"></div>
           </div>
-          <a href="#" class="btn-large primary project-btn"
+          <a
+            href="https://jeonguni-career.notion.site/cf91240b64674ddbba1d1a0752d094c1?pvs=4"
+            target="_blank"
+            class="btn-large primary project-btn"
             >경력기술서 바로가기</a
           >
         </div>
@@ -163,68 +169,5 @@
       </ul>
       <div class="footer-sign">ⓒ 2024. LEE JEONG YOON</div>
     </footer>
-    <script>
-      // 프로젝트 리스트
-      const projectData = [
-        { id: 1, name: "AI 드림쌤", background: "./assets/images/bg-1.jpg" },
-        {
-          id: 2,
-          name: "Dream Writing\n웹버전 전환",
-          background: "./assets/images/bg-1.jpg",
-        },
-        {
-          id: 3,
-          name: "AI 디지털 교과서",
-          background: "./assets/images/bg-1.jpg",
-        },
-        {
-          id: 4,
-          name: "수학의 세포들 고도화",
-          background: "./assets/images/bg-1.jpg",
-        },
-        { id: 5, name: "챗봇 체험단", background: "./assets/images/bg-1.jpg" },
-        {
-          id: 6,
-          name: "AI 중등 생활기록부",
-          background: "./assets/images/bg-1.jpg",
-        },
-      ];
-
-      //swiper 생성
-      const swiperWrapper = document.querySelector(".swiper-wrapper");
-      projectData.forEach((project) => {
-        const slide = document.createElement("div");
-        slide.className = "swiper-slide project-item";
-        slide.style.backgroundImage = `url(${project.background})`;
-        slide.innerHTML = `<span>${project.name.replace("\n", "<br>")}</span>`;
-        swiperWrapper.appendChild(slide);
-      });
-
-      // swiper script
-      const swiper = new Swiper(".project-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        mousewheel: true,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-          1200: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-        },
-      });
-    </script>
   </body>
 </html>
