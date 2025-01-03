@@ -28,7 +28,10 @@
 
   &-item {
     height: 50rem;
-    background: $secondary-color;
+    background-color: $secondary-color;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     border-radius: 0.8rem;
     overflow: hidden;
     position: relative;
@@ -49,7 +52,7 @@
 
     span {
       position: absolute;
-      color: #000;
+      color: #fff;
       top: 50%;
       left: 50%;
       opacity: 0;
@@ -70,6 +73,7 @@
 
   &-btn {
     margin: 5rem auto;
+    width: 30rem;
 
     &:hover {
       transform: translateY(-1rem);
