@@ -1,26 +1,34 @@
 // 프로젝트 리스트
 const projectData = [
-  { id: 1, name: "AI 드림쌤", background: "./assets/images/bg-1.jpg" },
+  {
+    id: 1,
+    name: "AI 드림쌤",
+    background: "./assets/images/bg/project-dreamssam.png",
+  },
   {
     id: 2,
     name: "Dream Writing\n웹버전 전환",
-    background: "./assets/images/bg-1.jpg",
+    background: "./assets/images/bg/project-dreamwriting.png",
   },
   {
     id: 3,
     name: "AI 디지털 교과서",
-    background: "./assets/images/bg-1.jpg",
+    background: "./assets/images/bg/project-aidt.png",
   },
   {
     id: 4,
     name: "수학의 세포들 고도화",
-    background: "./assets/images/bg-1.jpg",
+    background: "./assets/images/bg/project-mathcell.png",
   },
-  { id: 5, name: "챗봇 체험단", background: "./assets/images/bg-1.jpg" },
+  {
+    id: 5,
+    name: "챗봇 체험단",
+    background: "./assets/images/bg/project-chatbot.png",
+  },
   {
     id: 6,
     name: "AI 중등 생활기록부",
-    background: "./assets/images/bg-1.jpg",
+    background: "./assets/images/bg/project-middleAi.png",
   },
 ];
 

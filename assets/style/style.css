@@ -839,6 +839,7 @@ footer > div {
 .project-item span {
   text-align: center;
   color: #fff;
+  word-break: keep-all;
 }
 .project-item:hover {
   opacity: 0.6;
