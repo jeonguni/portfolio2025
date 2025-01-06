@@ -59,3 +59,61 @@ const swiper = new Swiper(".project-swiper", {
     },
   },
 });
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  // intro bubble
+  const introBubble = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".intro-section",
+        toggleActions: "restart pause reverse pause",
+        start: "-3rem center",
+        end: "60% center",
+        scrub: 1,
+      },
+      defaults: {
+        duration: 1,
+        autoAlpha: 1,
+        ease: "power2.in",
+      },
+    })
+    .to(".bubble1", {}, 0)
+    .to(".bubble2", {}, 3)
+    .to(".bubble3", {}, 6)
+    .to(".bubble4", {}, 9)
+    .to(".bubble5", {}, 12)
+    .to(".bubble6", {}, 15);
+
+  // career list
+  const careerTit = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".career-ball",
+        toggleActions: "restart pause reverse pause",
+        start: "top center",
+        scrub: 1,
+      },
+      defaults: {
+        duration: 0.3,
+        autoAlpha: 1,
+        ease: "power2.in",
+      },
+    })
+    .to(".item1", {}, 0)
+    .to(".item2", {}, 0.3)
+    .to(".item3", {}, 0.5);
+
+  // career ball
+  gsap.to(".career-ball", {
+    scrollTrigger: {
+      trigger: ".career-ball",
+      toggleActions: "restart pause reverse pause",
+      start: "3rem center",
+      scrub: 1,
+    },
+    y: "76.4rem",
+    ease: "none",
+    duration: 5,
+  });
+  careerTit, 3;
+});

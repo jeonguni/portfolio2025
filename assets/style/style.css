@@ -688,6 +688,8 @@ footer > div {
   justify-content: space-evenly;
 }
 .intro-bubble {
+  visibility: hidden;
+  transition: visibility 0.3;
   position: relative;
   padding: 1.5rem 1.7rem;
   border-radius: 0.8rem;
@@ -777,6 +779,7 @@ footer > div {
   background: #f9f5ef;
 }
 .career-item {
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

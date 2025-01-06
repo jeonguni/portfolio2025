@@ -38,6 +38,8 @@
   }
 
   &-bubble {
+    visibility: hidden;
+    transition: visibility 0.3;
     position: relative;
     padding: 1.5rem 1.7rem;
     border-radius: 0.8rem;
