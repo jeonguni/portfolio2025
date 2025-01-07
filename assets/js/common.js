@@ -4,11 +4,13 @@ const projectData = [
     id: 1,
     name: "AI 드림쌤",
     background: "./assets/images/bg/project-dreamssam.png",
+    link: "https://ai-virtual-tutor.i-screamreport.com/signin?p=1986990",
   },
   {
     id: 2,
     name: "Dream Writing\n웹버전 전환",
     background: "./assets/images/bg/project-dreamwriting.png",
+    link: "https://dev-aiwrite-web-app.i-screamreport.com/home",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const projectData = [
     id: 6,
     name: "AI 중등 생활기록부",
     background: "./assets/images/bg/project-middleAi.png",
+    link: "https://dev.ms-stud.i-screamreport.com/main/analysis?p=123",
   },
 ];
 
@@ -99,7 +102,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 //swiper 생성
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 projectData.forEach((project) => {
-  const slide = document.createElement("div");
+  const slide = document.createElement("a");
+  slide.href = project.link;
+  slide.target = "_blank";
+  slide.rel = "noopener noreferrer";
   slide.className = "swiper-slide project-item";
   slide.style.backgroundImage = `url(${project.background})`;
   slide.innerHTML = `<span>${project.name.replace("\n", "<br>")}</span>`;
