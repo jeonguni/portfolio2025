@@ -648,11 +648,13 @@ footer > div {
   align-items: flex-start;
 }
 .main-bold {
+  visibility: hidden;
   display: block;
   font-family: "mazius";
   font-size: 10rem;
 }
 .main-name {
+  visibility: hidden;
   line-height: 8rem;
   font-size: 10rem;
   font-weight: 700;

@@ -32,43 +32,13 @@ const projectData = [
   },
 ];
 
-//swiper 생성
-const swiperWrapper = document.querySelector(".swiper-wrapper");
-projectData.forEach((project) => {
-  const slide = document.createElement("div");
-  slide.className = "swiper-slide project-item";
-  slide.style.backgroundImage = `url(${project.background})`;
-  slide.innerHTML = `<span>${project.name.replace("\n", "<br>")}</span>`;
-  swiperWrapper.appendChild(slide);
-});
-
-// swiper script
-const swiper = new Swiper(".project-swiper", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  mousewheel: true,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-  },
-});
-
 document.addEventListener("DOMContentLoaded", (event) => {
+  // main
+  const mainName = gsap.timeline();
+  mainName
+    .to(".main-bold", { duration: 2, autoAlpha: 1, y: -30 })
+    .to(".main-name", { duration: 2, autoAlpha: 1, y: -30, delay: -1 });
+
   // intro bubble
   const introBubble = gsap
     .timeline({
@@ -124,4 +94,40 @@ document.addEventListener("DOMContentLoaded", (event) => {
     duration: 5,
   });
   careerTit, 3;
+});
+
+//swiper 생성
+const swiperWrapper = document.querySelector(".swiper-wrapper");
+projectData.forEach((project) => {
+  const slide = document.createElement("div");
+  slide.className = "swiper-slide project-item";
+  slide.style.backgroundImage = `url(${project.background})`;
+  slide.innerHTML = `<span>${project.name.replace("\n", "<br>")}</span>`;
+  swiperWrapper.appendChild(slide);
+});
+
+// swiper script
+const swiper = new Swiper(".project-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  mousewheel: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
 });
