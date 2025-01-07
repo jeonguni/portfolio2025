@@ -16,16 +16,19 @@ const projectData = [
     id: 3,
     name: "AI 디지털 교과서",
     background: "./assets/images/bg/project-aidt.png",
+    link: "https://www5-dev3.smart-aidt.com/math/student/analyze",
   },
   {
     id: 4,
     name: "수학의 세포들 고도화",
     background: "./assets/images/bg/project-mathcell.png",
+    link: "https://dev.mathcell-es.i-screamreport.com/home",
   },
   {
     id: 5,
     name: "챗봇 체험단",
     background: "./assets/images/bg/project-chatbot.png",
+    link: "https://ejy55n.cafe24.com/chatbot-tester/html/",
   },
   {
     id: 6,
