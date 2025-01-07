@@ -983,6 +983,12 @@ footer > div {
   }
 }
 @media all and (max-width: 350px) {
+  .intro-bubble {
+    padding: 1.2rem 1.4rem;
+  }
+  .intro-bubble p {
+    font-size: 1.4rem;
+  }
   .career-wrap {
     padding-left: 0;
   }
