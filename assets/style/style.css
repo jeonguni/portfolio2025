@@ -655,6 +655,7 @@ footer > div {
   font-size: 10rem;
 }
 .main-name {
+  white-space: nowrap;
   visibility: hidden;
   line-height: 8rem;
   font-size: 10rem;
