@@ -235,6 +235,7 @@ body {
   background: #1d2024;
   color: #f9f5ef;
   transition: all 0.3s;
+  overflow-x: hidden;
 }
 
 html {
@@ -729,8 +730,6 @@ footer > div {
 .intro-img {
   max-width: 50rem;
   max-height: 50rem;
-  min-width: 50rem;
-  min-height: 50rem;
   width: 100%;
   height: 100%;
   border-radius: 1.6rem;
@@ -881,5 +880,116 @@ footer > div {
 @media all and (max-width: 1024px) {
   html {
     font-size: 8px;
+  }
+}
+@media all and (max-width: 863px) {
+  html {
+    font-size: 6px;
+  }
+}
+@media all and (max-width: 768px) {
+  .main-section {
+    padding: 10rem 5rem 0;
+  }
+  .main-bold {
+    font-size: 5rem;
+  }
+  .main-name {
+    font-size: 5rem;
+  }
+  .intro-section {
+    padding: 0 5rem;
+  }
+  .intro-wrap {
+    position: relative;
+    width: 100%;
+  }
+  .intro-bubble {
+    position: absolute;
+  }
+  .intro-bubble.bubble1 {
+    top: 2rem;
+    left: -10rem;
+  }
+  .intro-bubble.bubble2 {
+    top: 2rem;
+    right: -4rem;
+  }
+  .intro-bubble.bubble3 {
+    top: 14rem;
+    left: -5rem;
+  }
+  .intro-bubble.bubble4 {
+    top: 16rem;
+    right: -9rem;
+  }
+  .intro-bubble.bubble5 {
+    top: 32rem;
+    left: -10rem;
+  }
+  .intro-bubble.bubble6 {
+    top: 32rem;
+    right: -10rem;
+  }
+  .career-section {
+    padding: 0 5rem;
+  }
+  .career-wrap {
+    padding-left: 15rem;
+  }
+  .career-line {
+    left: 15rem;
+  }
+  .project-section {
+    padding: 0 5rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .career-wrap {
+    padding-left: 5rem;
+  }
+  .career-line {
+    left: 5rem;
+  }
+  .career-item {
+    margin-left: 10rem;
+  }
+  .intro-img {
+    margin-top: 10rem;
+  }
+  .intro-bubble.bubble1 {
+    left: 0;
+    top: 5rem;
+  }
+  .intro-bubble.bubble2 {
+    top: 0;
+    right: -1rem;
+  }
+  .intro-bubble.bubble3 {
+    left: -3rem;
+    top: 20rem;
+  }
+  .intro-bubble.bubble4 {
+    top: 11rem;
+    right: -3rem;
+  }
+  .intro-bubble.bubble5 {
+    top: 46rem;
+    left: 0;
+  }
+  .intro-bubble.bubble6 {
+    top: 38rem;
+    right: -4rem;
+  }
+}
+@media all and (max-width: 350px) {
+  .career-wrap {
+    padding-left: 0;
+  }
+  .career-line {
+    left: 0;
+  }
+  .career-item {
+    margin-left: 8rem;
   }
 }

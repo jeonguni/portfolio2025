@@ -12,8 +12,163 @@
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 863px) {
   html {
-    // font-size: 6px;
+    font-size: 6px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .main {
+    &-section {
+      padding: 10rem 5rem 0;
+    }
+
+    &-bold {
+      font: {
+        size: 5rem;
+      }
+    }
+
+    &-name {
+      font: {
+        size: 5rem;
+      }
+    }
+  }
+
+  .intro {
+    &-section {
+      padding: 0 5rem;
+    }
+
+    &-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    &-bubble {
+      position: absolute;
+
+      &.bubble1 {
+        top: 2rem;
+        left: -10rem;
+      }
+
+      &.bubble2 {
+        top: 2rem;
+        right: -4rem;
+      }
+
+      &.bubble3 {
+        top: 14rem;
+        left: -5rem;
+      }
+
+      &.bubble4 {
+        top: 16rem;
+        right: -9rem;
+      }
+
+      &.bubble5 {
+        top: 32rem;
+        left: -10rem;
+      }
+
+      &.bubble6 {
+        top: 32rem;
+        right: -10rem;
+      }
+    }
+  }
+
+  .career {
+    &-section {
+      padding: 0 5rem;
+    }
+
+    &-wrap {
+      padding-left: 15rem;
+    }
+
+    &-line {
+      left: 15rem;
+    }
+  }
+
+  .project {
+    &-section {
+      padding: 0 5rem;
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .career {
+    &-wrap {
+      padding-left: 5rem;
+    }
+
+    &-line {
+      left: 5rem;
+    }
+
+    &-item {
+      margin-left: 10rem;
+    }
+  }
+
+  .intro {
+    &-img {
+      margin-top: 10rem;
+    }
+
+    &-bubble {
+      &.bubble1 {
+        left: 0;
+        top: 5rem;
+      }
+
+      &.bubble2 {
+        top: 0;
+        right: -1rem;
+      }
+
+      &.bubble3 {
+        left: -3rem;
+        top: 20rem;
+      }
+
+      &.bubble4 {
+        top: 11rem;
+        right: -3rem;
+      }
+
+      &.bubble5 {
+        top: 46rem;
+        left: 0;
+      }
+
+      &.bubble6 {
+        top: 38rem;
+        right: -4rem;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 350px) {
+  .career {
+    &-wrap {
+      padding-left: 0;
+    }
+
+    &-line {
+      left: 0;
+    }
+
+    &-item {
+      margin-left: 8rem;
+    }
   }
 }
