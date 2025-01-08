@@ -10,7 +10,7 @@ const projectData = [
     id: 2,
     name: "Dream Writing\n웹버전 전환",
     background: "./assets/images/bg/project-dreamwriting.png",
-    link: "https://dev-aiwrite-web-app.i-screamreport.com/home",
+    link: "https://aiwrite-web-app.i-screamreport.com/home",
   },
   {
     id: 3,
