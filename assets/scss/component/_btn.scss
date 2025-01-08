@@ -60,7 +60,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     height: 4rem;
     min-width: 14rem;
     border-radius: 6rem;
@@ -83,6 +83,7 @@
 
       &:hover {
         background: $secondary-color;
+        color: #171717;
       }
 
       &.disabled {

@@ -7,9 +7,19 @@
   &-tit {
     border-bottom: 0.1rem solid $secondary-color;
     padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
     font: {
       family: $font-eng-tit;
       size: 2rem;
+    }
+  }
+
+  &-more {
+    margin-left: 1rem;
+    width: fit-content;
+    font: {
+      family: "Pretendard";
     }
   }
 
@@ -37,21 +47,21 @@
     position: relative;
     white-space: pre-line;
     transition: opacity 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      background: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
     span {
       text-align: center;
       color: #fff;
       word-break: keep-all;
-    }
-
-    &:hover {
-      opacity: 0.6;
-
-      span {
-        opacity: 1;
-      }
-    }
-
-    span {
       position: absolute;
       color: #fff;
       top: 50%;
@@ -59,10 +69,23 @@
       opacity: 0;
       transform: translate(-50%, -50%);
       transition: opacity 0.3s;
+      filter: drop-shadow(2px 2px 3px #aaa);
       font: {
-        size: $font-large;
+        size: $font-extra-large;
         weight: 700;
         opacity: 0;
+      }
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+
+      span {
+        opacity: 1;
+        color: #fff;
+        z-index: 3;
       }
     }
 

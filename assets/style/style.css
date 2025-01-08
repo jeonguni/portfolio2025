@@ -488,7 +488,7 @@ footer > div {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   height: 4rem;
   min-width: 14rem;
   border-radius: 6rem;
@@ -510,6 +510,7 @@ footer > div {
 }
 .btn-medium.primary:hover {
   background: #f9f5ef;
+  color: #171717;
 }
 .btn-medium.primary.disabled {
   opacity: 20%;
@@ -812,8 +813,15 @@ footer > div {
 .project-tit {
   border-bottom: 0.1rem solid #f9f5ef;
   padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
   font-family: "mazius";
   font-size: 2rem;
+}
+.project-more {
+  margin-left: 1rem;
+  width: fit-content;
+  font-family: "Pretendard";
 }
 .project-wrap {
   position: relative;
@@ -838,18 +846,19 @@ footer > div {
   white-space: pre-line;
   transition: opacity 0.3s;
 }
+.project-item::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 0.3s;
+}
 .project-item span {
   text-align: center;
   color: #fff;
   word-break: keep-all;
-}
-.project-item:hover {
-  opacity: 0.6;
-}
-.project-item:hover span {
-  opacity: 1;
-}
-.project-item span {
   position: absolute;
   color: #fff;
   top: 50%;
@@ -857,9 +866,18 @@ footer > div {
   opacity: 0;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s;
-  font-size: 1.8rem;
+  filter: drop-shadow(2px 2px 3px #aaa);
+  font-size: 2rem;
   font-weight: 700;
   font-opacity: 0;
+}
+.project-item:hover::after {
+  opacity: 1;
+}
+.project-item:hover span {
+  opacity: 1;
+  color: #fff;
+  z-index: 3;
 }
 .project-item img {
   width: 100%;
