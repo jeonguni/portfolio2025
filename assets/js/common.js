@@ -16,7 +16,6 @@ const projectData = [
     id: 3,
     name: "AI 디지털 교과서",
     background: "./assets/images/bg/project-aidt.png",
-    link: "https://www5-dev3.smart-aidt.com/math/student/analyze",
   },
   {
     id: 4,
@@ -105,10 +104,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
 //swiper 생성
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 projectData.forEach((project) => {
-  const slide = document.createElement("a");
-  slide.href = project.link;
-  slide.target = "_blank";
-  slide.rel = "noopener noreferrer";
+  const slide = project.link
+    ? document.createElement("a")
+    : document.createElement("div");
+
+  if (project.link) {
+    slide.href = project.link;
+    slide.target = "_blank";
+    slide.rel = "noopener noreferrer";
+  }
+
   slide.className = "swiper-slide project-item";
   slide.style.backgroundImage = `url(${project.background})`;
   slide.innerHTML = `<span>${project.name.replace("\n", "<br>")}</span>`;
@@ -139,4 +144,37 @@ const swiper = new Swiper(".project-swiper", {
       spaceBetween: 10,
     },
   },
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 디교 swiper 찾기
+  const projectItem = document.querySelector(
+    ".swiper-slide.project-item:nth-child(3)"
+  );
+
+  // 플로팅 UI 요소 생성
+  const floatingUI = document.createElement("div");
+  floatingUI.className = "project-floating";
+  floatingUI.innerText =
+    "현재 진행중인 교육부 주관사업으로 외부 노출시 민형사상의 책임을 질 수 있어, 코드 및 디자인 노출이 엄격하게 금지되어 있습니다. 따라서 해당 프로젝트는 경력 기술서로만 확인하실 수 있는점 양해 부탁드리겠습니다.";
+  floatingUI.style.display = "none"; // 초기에는 숨김
+
+  projectItem.appendChild(floatingUI);
+
+  // 마우스 움직임 이벤트 핸들러
+  projectItem.addEventListener("mousemove", (e) => {
+    const rect = projectItem.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const offsetY = e.clientY - rect.top;
+
+    // 마우스 위치
+    floatingUI.style.left = `${offsetX - floatingUI.offsetWidth - 10}px`;
+    floatingUI.style.top = `${offsetY - floatingUI.offsetHeight - 10}px`;
+    floatingUI.style.display = "block";
+  });
+
+  // 마우스가 영역을 벗어날 때 숨김
+  projectItem.addEventListener("mouseleave", () => {
+    floatingUI.style.display = "none";
+  });
 });

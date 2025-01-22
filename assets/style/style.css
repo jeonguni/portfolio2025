@@ -890,6 +890,22 @@ footer > div {
 .project-btn:hover {
   transform: translateY(-1rem);
 }
+.project-floating {
+  position: absolute;
+  background-color: #e54141;
+  padding: 1.2rem;
+  max-width: 22rem;
+  min-width: 22rem;
+  width: 100%;
+  line-height: 1.5;
+  color: #fff;
+  border-radius: 1rem;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+  z-index: 10;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 
 @media all and (max-width: 1200px) {
   .project-wrap {
