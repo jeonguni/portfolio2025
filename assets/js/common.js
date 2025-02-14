@@ -33,7 +33,7 @@ const projectData = [
     id: 6,
     name: "AI 중등 생활기록부",
     background: "./assets/images/bg/project-middleAi.png",
-    link: "https://dev.ms-stud.i-screamreport.com/main/analysis?p=123",
+    link: "https://ejy55n.cafe24.com/03.analytics_middle/html/subject.html",
   },
 ];
 
