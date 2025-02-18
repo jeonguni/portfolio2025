@@ -4,7 +4,7 @@ const projectData = [
     id: 1,
     name: "AI 드림쌤",
     background: "./assets/images/bg/project-dreamssam.png",
-    link: "https://ai-virtual-tutor.i-screamreport.com/signin?p=1986990",
+    link: "https://ejy55n.cafe24.com/04.dream_ssam/html/",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const projectData = [
     id: 6,
     name: "AI 중등 생활기록부",
     background: "./assets/images/bg/project-middleAi.png",
-    link: "https://ejy55n.cafe24.com/03.analytics_middle/html/subject.html",
+    link: "https://ejy55n.cafe24.com/03.analytics_middle/html/",
   },
 ];
 

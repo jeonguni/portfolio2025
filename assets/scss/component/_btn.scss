@@ -38,7 +38,7 @@
       border: 1px solid #171717;
 
       &:hover {
-        color: $secondary-color;
+        color: $primary-color;
         border: 1px solid $secondary-color;
       }
 
@@ -82,7 +82,7 @@
       }
 
       &:hover {
-        background: $secondary-color;
+        background: $primary-color;
         color: #171717;
       }
 
@@ -114,6 +114,7 @@
 
       &:hover {
         color: $secondary-color;
+        background: $primary-color;
         border: 1px solid $secondary-color;
       }
 
@@ -168,6 +169,7 @@
 
       &:hover {
         color: $secondary-color;
+        background: $primary-color;
         border: 1px solid $secondary-color;
       }
 

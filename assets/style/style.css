@@ -471,7 +471,7 @@ footer > div {
   border: 1px solid #171717;
 }
 .btn-large.secondary:hover {
-  color: #f9f5ef;
+  color: #1d2024;
   border: 1px solid #f9f5ef;
 }
 .btn-large.secondary.disabled {
@@ -509,7 +509,7 @@ footer > div {
   font-size: 1.4rem;
 }
 .btn-medium.primary:hover {
-  background: #f9f5ef;
+  background: #1d2024;
   color: #171717;
 }
 .btn-medium.primary.disabled {
@@ -536,6 +536,7 @@ footer > div {
 }
 .btn-medium.secondary:hover {
   color: #f9f5ef;
+  background: #1d2024;
   border: 1px solid #f9f5ef;
 }
 .btn-medium.secondary.disabled {
@@ -581,6 +582,7 @@ footer > div {
 }
 .btn-small.secondary:hover {
   color: #f9f5ef;
+  background: #1d2024;
   border: 1px solid #f9f5ef;
 }
 .btn-small.secondary.disabled {
